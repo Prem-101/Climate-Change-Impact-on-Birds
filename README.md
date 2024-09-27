@@ -18,7 +18,7 @@ The dataset includes:
 ### Exploratory Data Analysis (EDA)
 The EDA conducted provides insights into how climatic factors affect bird species distribution and behavior. Key findings include:
 - **Bird Distribution**: The variation in species distribution across different climate conditions.
-- **Climate Impact**: How temperature, precipitation, and humidity levels correlate with specific bird populations.
+- **Climate Impact**: How temperature, humidity, sky and wind correlate with specific bird populations.
 
 **Visualizations**:
 - Heatmaps displaying correlations between bird sightings and climate variables.
@@ -27,14 +27,18 @@ The EDA conducted provides insights into how climatic factors affect bird specie
 
 ## Modeling Approach
 The model predicts climate conditions (e.g., temperature, humidity) based on bird species and geographic location. Several machine learning algorithms were tested, including:
+- Linear Regression
+- Lasso Regression
+- Ridge Regression
+- K-Neighbors Regressor
 - Random Forest Regressor
-- Gradient Boosting Regressor
 - XGBoost
 
   ### Model Inputs:
 - **Bird Species**: Categorical data representing the bird species.
-- **Location (Latitude, Longitude)**: Numerical inputs for geographic location.
-- **Season**: Added to capture seasonal variation in climate conditions.
+- **Location**: National Park and Plot Name.
+- **Location Type**: Grassland or Forest.
+- **Date**: Date, Month and Year.
 
 ### Performance Metrics:
 - **Root Mean Squared Error (RMSE)**
@@ -50,7 +54,7 @@ The **Random Forest Regressor** emerged as the best model based on performance m
   - Data Processing: `pandas`, `numpy`
   - Visualization: `matplotlib`, `seaborn`
   - Machine Learning: `scikit-learn`, `xgboost`
-- **Tools**: Jupyter Notebook, Google Colab
+- **Tools**: Jupyter Notebook
 
 ## How to Run the Project
 ### Prerequisites:
